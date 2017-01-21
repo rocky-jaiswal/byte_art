@@ -3,7 +3,7 @@
 
 (defn draw-triangle [triangle-edges colors]
   [:polygon
-    {:stroke "#B1B1B1" :stroke-width 0 :fill (nth (shuffle colors) 1)}
+    {:stroke "#B1B1B1" :stroke-width 0 :fill (first (shuffle colors))}
     (nth triangle-edges 0) (nth triangle-edges 1) (nth triangle-edges 2)])
 
 (defn create-document [triangles colors]
