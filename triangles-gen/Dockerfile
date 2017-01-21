@@ -15,4 +15,4 @@ RUN npm install --production
 
 ADD . /app
 
-CMD ["node"]
+CMD ["node", "index.js"]

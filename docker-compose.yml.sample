@@ -4,7 +4,6 @@ services:
     build: ./triangles-gen
     networks:
       - byteart
-    command: watch ls
     environment:
       NODE_ENV: 'docker'
   byteart-svg:
