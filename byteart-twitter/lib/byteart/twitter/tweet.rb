@@ -15,7 +15,9 @@ module Byteart
       end
 
       def create(img)
-        @twitter_client.update_with_media('', File.new(convert_to_png(img)))
+        png_image_path = convert_to_png(img)
+        @twitter_client.update_with_media('', File.new(png_image_path)) if ENV['tweet']
+        png_image_path
       end
 
       private

@@ -7,5 +7,5 @@
 (defn colors []
   (str "#" (str/join (take 6 (shuffle hexcodes)))))
 
-(defn get-colors []
-  (nth (repeatedly 6 colors) 1))
+(defn get-colors [n]
+  (repeatedly n colors))
