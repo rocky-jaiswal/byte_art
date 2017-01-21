@@ -26,9 +26,9 @@ services:
     networks:
       - byteart
     environment:
-      CONS_SECRET: ''
-      ACCESS_TOKEN: ''
-      ACCESS_SECRET: ''
+      CONS_SECRET: "${CONS_SECRET}"
+      ACCESS_TOKEN: "${ACCESS_TOKEN}"
+      ACCESS_SECRET: "${ACCESS_SECRET}"
       TWEET: 'true'
 networks:
   byteart:
