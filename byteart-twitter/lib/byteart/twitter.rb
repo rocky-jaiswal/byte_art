@@ -1,5 +1,5 @@
 require "byteart/twitter/version"
-require "byteart/twitter/tweet_manager"
+require "byteart/twitter/tweet"
 
 module Byteart
   module Twitter

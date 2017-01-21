@@ -3,4 +3,4 @@
             [ring.util.response :refer [response]]))
 
 (defn create [req]
-  (response {:name (txdraw/create-svg (get req :body))}))
+  (response {:path (txdraw/create-svg (get req :body))}))

@@ -1,4 +1,5 @@
 /triangles-gen/node_modules/
 /triangles-svg/*.svg
 /*.log
-/byteart-svg/*.svg
+/*.svg
+/*.png

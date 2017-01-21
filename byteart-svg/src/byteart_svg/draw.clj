@@ -12,6 +12,6 @@
     (map draw-triangle triangles)])
 
 (defn create-svg [triangles]
-  (let [imageName (str "triangles-" (System/currentTimeMillis) ".svg")]
+  (let [imageName (str "/home/rockyj/Workspace/byte_art/triangles-" (System/currentTimeMillis) ".svg")]
     (io/render-svg (create-document triangles) imageName)
     imageName))
