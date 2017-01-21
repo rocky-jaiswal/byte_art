@@ -1,0 +1,22 @@
+{
+  "name": "triangles-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rocky Jaiswal",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "delaunay-triangulate": "^1.1.6"
+  },
+  "devDependencies": {
+    "jest": "^18.1.0"
+  },
+  "jest": {
+    "verbose": true,
+    "browser": false
+  }
+}
