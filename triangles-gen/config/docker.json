@@ -1,0 +1,6 @@
+{
+  "services": {
+    "svgGeneratorUrl": "http://byteart-svg:3000/triangles",
+    "tweetManagerUrl": "http://byteart-twitter:4567/tweet"
+  }
+}

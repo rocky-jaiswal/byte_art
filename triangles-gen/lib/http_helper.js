@@ -1,15 +1,16 @@
 'use strict';
 
-const axios = require('axios');
+const axios  = require('axios');
+const Config = require('config');
 
 class HTTPHelper {
 
   createSVG (triangles) {
-    return axios.post('http://byteart-svg:3000/triangles', triangles);
+    return axios.post(Config.get('services.svgGeneratorUrl'), triangles);
   }
 
   postToTwitter (imgPath) {
-    return axios.post('http://byteart-twitter:4567/tweet', { svgPath: imgPath });
+    return axios.post(Config.get('services.tweetManagerUrl'), { svgPath: imgPath });
   }
 
 }

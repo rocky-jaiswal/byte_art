@@ -5,6 +5,8 @@ services:
     networks:
       - byteart
     command: watch ls
+    environment:
+      NODE_ENV: 'docker'
   byteart-svg:
     build: ./byteart-svg
     ports:
@@ -25,9 +27,10 @@ services:
     networks:
       - byteart
     environment:
-      CONS_SECRET: 'foo'
-      ACCESS_TOKEN: 'bar'
-      ACCESS_SECRET: 'baz'
+      CONS_SECRET: ''
+      ACCESS_TOKEN: ''
+      ACCESS_SECRET: ''
+      TWEET: 'true'
 networks:
   byteart:
     driver: "bridge"
