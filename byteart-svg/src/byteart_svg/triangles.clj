@@ -4,4 +4,4 @@
             [ring.util.response :refer [response]]))
 
 (defn create [req]
-  (response {:path (txdraw/create-svg (get req :body) (txcolors/get-colors (+ 1 (rand-int 8))))}))
+  (response {:path (txdraw/create-svg (get req :body) (txcolors/get-colors (+ 2 (rand-int 6))))}))
