@@ -6,6 +6,7 @@ RUN apt-get install -y build-essential git imagemagick graphicsmagick
 RUN gem install bundler
 
 RUN mkdir /app
+RUN mkdir -p /opt/byteart
 WORKDIR /app
 
 COPY . /app/

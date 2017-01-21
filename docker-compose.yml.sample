@@ -1,0 +1,36 @@
+version: '2'
+services:
+  triangle-gen:
+    build: ./triangles-gen
+    networks:
+      - byteart
+    command: watch ls
+  byteart-svg:
+    build: ./byteart-svg
+    ports:
+      - "3000:3000"
+    volumes:
+      - /home/rockyj/tmp/byteart:/opt/byteart
+    networks:
+      - byteart
+    environment:
+      IMAGE_PATH: '/opt/byteart'
+  byteart-twitter:
+    build: ./byteart-twitter
+    command: bundle exec ruby lib/byteart/twitter/app.rb -o 0.0.0.0 -p 4567
+    ports:
+      - "4567:4567"
+    volumes:
+      - /home/rockyj/tmp/byteart:/opt/byteart
+    networks:
+      - byteart
+    environment:
+      CONS_SECRET: 'foo'
+      ACCESS_TOKEN: 'bar'
+      ACCESS_SECRET: 'baz'
+networks:
+  byteart:
+    driver: "bridge"
+volumes:
+  data:
+    driver: "local"

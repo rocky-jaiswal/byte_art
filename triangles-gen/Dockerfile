@@ -14,3 +14,5 @@ COPY npm-shrinkwrap.json /app/
 RUN npm install --production
 
 ADD . /app
+
+CMD ["node"]

@@ -1,14 +1,14 @@
 FROM clojure:alpine
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /app
+RUN mkdir -p /opt/byteart
 
-COPY project.clj /usr/src/app/
-RUN lein deps
+WORKDIR /app
 
-COPY . /usr/src/app
+COPY project.clj /app
+# RUN lein deps
 
-RUN mv "$(lein uberjar | sed -n 's/^Created \(.*standalone\.jar\)/\1/p')" app-standalone.jar
+COPY . /app
+
 EXPOSE 3000
-
-CMD ["java", "-jar", "app-standalone.jar"]
+CMD ["java", "-jar", "target/byteart-svg-0.1.0-SNAPSHOT-standalone.jar"]

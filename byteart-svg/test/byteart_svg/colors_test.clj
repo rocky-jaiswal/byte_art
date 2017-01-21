@@ -4,4 +4,4 @@
 
 (deftest valid-colors
   (testing "returns a valid color"
-    (is (not (nil? (re-matches #"^#(\d|[A-Z]){6}" (get-colors)))))))
+    (is (not (nil? (re-matches #"^#(\d|[A-Z]){6}" (colors)))))))
