@@ -1,6 +1,6 @@
 {
   "services": {
-    "svgGeneratorUrl": "http://localhost:3000/triangles",
+    "svgGeneratorUrl": "http://localhost:3000",
     "tweetManagerUrl": "http://localhost:4567/tweet"
   }
 }

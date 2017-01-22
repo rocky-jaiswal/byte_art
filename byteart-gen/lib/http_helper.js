@@ -1,12 +1,17 @@
 'use strict';
 
-const axios  = require('axios');
-const Config = require('config');
+const axios      = require('axios');
+const Config     = require('config');
+const Triangles  = require('./triangles');
 
 class HTTPHelper {
 
-  createSVG (triangles) {
-    return axios.post(Config.get('services.svgGeneratorUrl'), triangles);
+  createTriangles () {
+    return axios.post(Config.get('services.svgGeneratorUrl') + '/triangles', Triangles.generate(1000, 500));
+  }
+
+  createCircles () {
+    return axios.post(Config.get('services.svgGeneratorUrl') + '/circles');
   }
 
   postToTwitter (imgPath) {
