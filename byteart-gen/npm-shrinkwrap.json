@@ -125,7 +125,14 @@
     "babel-core": {
       "version": "6.22.1",
       "from": "babel-core@>=6.0.0 <7.0.0",
-      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.22.1.tgz"
+      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.22.1.tgz",
+      "dependencies": {
+        "json5": {
+          "version": "0.5.1",
+          "from": "json5@>=0.5.0 <0.6.0",
+          "resolved": "https://registry.npmjs.org/json5/-/json5-0.5.1.tgz"
+        }
+      }
     },
     "babel-generator": {
       "version": "6.22.0",
@@ -328,15 +335,8 @@
     },
     "config": {
       "version": "1.24.0",
-      "from": "config@latest",
-      "resolved": "https://registry.npmjs.org/config/-/config-1.24.0.tgz",
-      "dependencies": {
-        "json5": {
-          "version": "0.4.0",
-          "from": "json5@0.4.0",
-          "resolved": "https://registry.npmjs.org/json5/-/json5-0.4.0.tgz"
-        }
-      }
+      "from": "config@>=1.24.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/config/-/config-1.24.0.tgz"
     },
     "content-type-parser": {
       "version": "1.0.1",
@@ -355,7 +355,7 @@
     },
     "cron": {
       "version": "1.2.1",
-      "from": "cron@latest",
+      "from": "cron@>=1.2.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/cron/-/cron-1.2.1.tgz"
     },
     "cryptiles": {
@@ -999,9 +999,9 @@
       "resolved": "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
     },
     "json5": {
-      "version": "0.5.1",
-      "from": "json5@>=0.5.0 <0.6.0",
-      "resolved": "https://registry.npmjs.org/json5/-/json5-0.5.1.tgz"
+      "version": "0.4.0",
+      "from": "json5@0.4.0",
+      "resolved": "https://registry.npmjs.org/json5/-/json5-0.4.0.tgz"
     },
     "jsonify": {
       "version": "0.0.0",

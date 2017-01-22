@@ -13,7 +13,7 @@ const createAndTweet = () => {
 };
 
 const job = new CronJob({
-  cronTime: '* 00 * * * *',
+  cronTime: '05 * * * * *',
   onTick: () => {
     createAndTweet();
   }
