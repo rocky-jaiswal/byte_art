@@ -10,7 +10,7 @@
   [:dali/page
     (map (fn [triangle] (draw-triangle triangle colors)) triangles)])
 
-(defn create-svg [triangles colors]
-  (let [imageName (str (System/getenv "IMAGE_PATH") "/triangles-" (System/currentTimeMillis) ".svg")]
+(defn create-triangles [triangles colors]
+  (let [imageName (str (or (System/getenv "IMAGE_PATH") ".") "/triangles-" (System/currentTimeMillis) ".svg")]
     (io/render-svg (create-document triangles colors) imageName)
     imageName))

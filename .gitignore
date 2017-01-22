@@ -3,4 +3,5 @@
 /*.log
 /*.svg
 /*.png
+/byteart-svg/*.svg
 /docker-compose.yml
