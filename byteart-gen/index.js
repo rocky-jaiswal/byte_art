@@ -3,11 +3,17 @@
 const CronJob    = require('cron').CronJob;
 const HTTPHelper = require('./lib/http_helper');
 
+const getRandomInt = (min, max) => {
+  const min = Math.ceil(min);
+  const max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 const createAndTweet = () => {
 
   const funcs = [ HTTPHelper.createRings, HTTPHelper.createTriangles, HTTPHelper.createCircles ];
 
-  funcs[Math.round(Math.random())].apply(null)
+  funcs[getRandomInt(0, 3)].apply(null)
     .then((response) => HTTPHelper.postToTwitter(response.data.path))
     .then(console.log)
     .catch(console.error);
