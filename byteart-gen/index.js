@@ -4,8 +4,8 @@ const CronJob    = require('cron').CronJob;
 const HTTPHelper = require('./lib/http_helper');
 
 const getRandomInt = (min, max) => {
-  const min = Math.ceil(min);
-  const max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
