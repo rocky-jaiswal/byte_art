@@ -21,6 +21,6 @@
   (testing "creates triangles"
     (is (not (nil? (create-triangles triangles some-colors))))))
 
-(deftest valid-circles
+(deftest valid-rings
   (testing "creates circles"
-    (is (not (nil? (create-circles circles some-colors))))))
+    (is (not (nil? (create-rings circles some-colors))))))

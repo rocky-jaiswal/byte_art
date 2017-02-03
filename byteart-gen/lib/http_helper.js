@@ -10,6 +10,10 @@ class HTTPHelper {
     return axios.post(Config.get('services.svgGeneratorUrl') + '/triangles', Triangles.generate(1000, 500));
   }
 
+  createRings () {
+    return axios.post(Config.get('services.svgGeneratorUrl') + '/rings');
+  }
+
   createCircles () {
     return axios.post(Config.get('services.svgGeneratorUrl') + '/circles');
   }

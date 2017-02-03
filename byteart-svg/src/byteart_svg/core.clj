@@ -5,6 +5,7 @@
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
             [ring.adapter.jetty :as jetty]
             [byteart-svg.triangles :as triangles]
+            [byteart-svg.rings :as rings]
             [byteart-svg.circles :as circles]))
 
 (defn handle-json [handler]
@@ -14,6 +15,7 @@
 
 (defroutes app
   (POST "/triangles" [] (handle-json triangles/create))
+  (POST "/rings" [] (handle-json rings/create))
   (POST "/circles" [] (handle-json circles/create)))
 
 (defn -main [& args]

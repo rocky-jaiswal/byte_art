@@ -5,7 +5,7 @@ const HTTPHelper = require('./lib/http_helper');
 
 const createAndTweet = () => {
 
-  const funcs = [ HTTPHelper.createTriangles, HTTPHelper.createCircles ];
+  const funcs = [ HTTPHelper.createRings, HTTPHelper.createTriangles, HTTPHelper.createCircles ];
 
   funcs[Math.round(Math.random())].apply(null)
     .then((response) => HTTPHelper.postToTwitter(response.data.path))
